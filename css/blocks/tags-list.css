@@ -1,0 +1,14 @@
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  &[class] {
+    margin-inline-start: calc(var(--size-400) * -1);
+  }
+
+  > * {
+    padding-top: var(--size-400);
+    padding-inline-start: var(--size-400);
+  }
+}

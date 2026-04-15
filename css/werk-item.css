@@ -1,0 +1,156 @@
+@import url('blocks/key-facts.css');
+
+.work-item {
+  & > article.panel:has(.gallery) {
+    @media (min-width: 62em) {
+      width: 50vw;
+    }
+  }
+}
+
+.related-projects {
+
+  min-height: 50svh;
+  place-items: center;
+
+  gap: var(--gap-size, var(--size-400));
+
+  & details {
+    display: flex;
+    flex-direction: row;
+
+    background: transparent;
+    color: white;
+
+    height: 30rem;
+    overflow: hidden;
+
+    position: relative;
+    z-index: 1;
+    
+    --open-size: min(30vw, 300px);
+
+    & summary {
+      padding: 1rem 1em;
+      min-width: 256px;
+      flex-shrink: 0; /* Prevent shrinking */
+
+      &::marker {
+        content: '';
+      }
+
+      & > span {
+        position: absolute;
+        z-index: 1;
+        left: 1ex;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity .5s ease;
+      }
+      & figcaption {
+        transition: opacity .5s .5s ease;
+      }
+      & figure {
+        position: absolute;
+        inset: 0;
+        white-space: nowrap;
+
+        & img {
+          inset: 0;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 20%;
+          z-index: -1;
+          transition: filter .5s;
+        }
+      }
+    }
+
+    .details-content-wrapper {
+      padding: 1.5rem 1em;
+      position: absolute;
+      inset: 0;
+      place-content: center;
+      & a {
+        position: absolute;
+        inset: 0;
+        color: transparent
+      }
+    }
+
+    /* Animate the image */
+    &[open] {
+      flex-grow: 1;
+
+      & summary {
+        & img {
+          filter: brightness(0.75);
+        }
+        & span,
+        & figcaption {
+          opacity: 1;
+        }
+      }
+    }
+
+    /* Animation */
+    &::details-content {
+      transition: height 0.5s ease, width 0.5s ease, content-visibility 0.5s ease allow-discrete;
+      width: 0;
+    }
+
+    &[open]::details-content {
+      width: var(--open-size);
+    }
+  }
+
+
+  & figure {
+    position: relative;
+
+    & span {
+      position: absolute;
+      top: 0;
+      padding: 1ex; 
+    }
+    
+    & img {
+      width: calc(100% + 2ex);
+      aspect-ratio: 1;
+      object-fit: cover;
+      margin: 0;
+    }
+
+    & figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1ex;
+      min-height: 2lh;
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 37em) {
+    flex-direction: column !important;
+
+    & details {
+      height: 9rem;
+      width: 100%;
+      flex-shrink: 0;
+
+      & img {
+        filter: brightness(.5)
+      }
+
+      &[open] {
+        height: 12lh;
+        & img {
+          filter: brightness(1)
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,58 @@
+.button {
+	display: inline-block;
+	padding: 0.5rem 1.33rem;
+	background: var(--color-secondary-glare);
+	color: var(--color-dark-shade);
+	border: 2px solid;
+	border-radius: 0.5rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	position: relative;
+
+	font-family: "Work Sans";
+	font-weight: bold;
+
+	/* Make sure hover state trumps all variants with a good ol’ important */
+	&:hover {
+		background: var(--color-secondary);
+		color: var(--color-dark-shade);
+	}
+
+	/* Add a ghost modifier */
+	&[data-variant='ghost'] {
+		background: transparent;
+		color: var(--color-primary);
+		&:hover {
+			background: transparent;
+			color: var(--color-primary-shade);
+		}
+	}
+
+	&[data-badge]::after {
+		position: absolute;
+		top: -1em;
+		font-size: 10pt;
+		font-variant-numeric: tabular-nums;
+		text-align: center;
+		background: var(--color-primary-shade);
+		width: 1.5em;
+		display: inline-block;
+		border-radius: 1rem;
+		color: var(--color-primary-glare);
+	}
+	&:hover[data-badge]::after {
+		background: var(--color-primary-glare);
+		color: var(--color-primary-shade);
+	}
+}
+
+[class*='bg-dark'] [data-variant='ghost']:hover {
+	color: var(--color-primary-glare);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1ex;
+  top: 1ex;
+}

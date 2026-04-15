@@ -1,0 +1,45 @@
+.site-foot {
+	padding: var(--size-jumbo) 0 var(--size-300) 0;
+	position: relative;
+	z-index: 100;
+	
+	& ul > li {
+		& > * {
+			display: flex;
+			font-weight: normal;
+		}
+
+		& a {
+			text-decoration: none;
+		}
+		
+		& .material-symbols-outlined {
+			opacity: .75;
+			scale: .95;
+			transform-origin: center;
+		}
+		& p:hover, p:focus-within {
+			& .material-symbols-outlined {
+				opacity: 1;
+				scale: 1;
+			}
+		}
+	}
+
+
+	& svg {
+		width: 32rem;
+		& path {
+			&:first-of-type {
+				fill: var(--color-primary-shade);
+			}
+
+			fill: var(--color-dark-shade);
+		}
+	}
+
+	& p.legal {
+		color: var(--color-dark-glare);
+		opacity: .5;
+	}
+}

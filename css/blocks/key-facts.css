@@ -1,0 +1,7 @@
+.key-facts {
+	--auto-grid-gap: var(--size-800) var(--size-500);
+
+	& li > * {
+		display: block;
+	}
+}

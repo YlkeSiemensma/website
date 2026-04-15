@@ -1,0 +1,6 @@
+.avatar {
+  aspect-ratio: 1 !important; 
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}

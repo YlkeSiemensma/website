@@ -1,0 +1,41 @@
+.teaser-slideshow {
+  overflow: auto;
+  height: 100%;
+
+  & figure {
+
+    opacity: 0;
+    
+    --slide-duration: 3s;
+    --duration: calc(var(--items) * var(--slide-duration));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    
+    /*
+    animation: slideshow-item var(--duration) forwards infinite;
+    animation-delay: calc( (var(--slide-index) / var(--items)) * var(--duration) );
+    */
+    
+    animation: slideshow-item calc(var(--duration)) forwards infinite;
+    animation-delay: calc(var(--slide-index) * var(--slide-duration));
+
+    & img {
+      object-position: center 25%;
+      filter: brightness(.5);
+    }
+  }
+}
+
+@keyframes slideshow-item {
+  0% { 
+    opacity: 0;
+  }
+  
+  10%, 30% {
+    opacity: 1;
+  }
+  40%, to {
+    opacity: 0;
+  }
+}

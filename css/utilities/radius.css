@@ -1,0 +1,21 @@
+:root {
+  --border-radius: 0.33rem;
+}
+
+.radius {
+  border-radius: var(--border-radius);
+
+  &.r-300 { border-radius: var(--size-300);}
+  &.r-400 { border-radius: var(--size-400);}
+  &.r-500 { border-radius: var(--size-500);}
+  &.r-600 { border-radius: var(--size-600);}
+  &.r-700 { border-radius: var(--size-700);}
+  &.r-800 { border-radius: var(--size-800);}
+  &.r-900 { border-radius: var(--size-900);}
+  &.r-major { border-radius: var(--size-major);}
+  &.r-jumbo { border-radius: var(--size-jumbo);}
+}
+
+.radius-50p {
+  border-radius: 50%;
+}

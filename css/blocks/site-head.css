@@ -1,0 +1,60 @@
+.site-head {
+	padding: var(--size-600) 0;
+	position: fixed;
+  z-index: 100;
+  width: 100%;
+	--text-color: var(--color-dark-shade);
+	color: var(--text-color);
+	fill:  currentColor;
+
+	&.is-on-dark {
+		--text-color: var(--color-light-glare);
+		
+	}
+
+	& .inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	& .brand {
+		flex-shrink: 0;
+		margin-inline-end: var(--size-600); /* Prevents nav bunching up to the logo */
+
+		/* Optical adjustment to account for the offset the sunken 3s create */
+		transform: translateY(0.25rem);
+
+		& svg {
+			width: 100px;
+			height: auto;
+			& #icon {
+				fill: var(--color-primary-shade);
+			}
+			& #wordmark {
+				fill: var(--text-color);
+			}
+		
+		}
+		/*
+		&:hover, &:focus {
+			& svg {
+				fill: var(--color-primary-shade);
+			}
+		}
+		*/
+	}
+
+	& nav {
+		padding: var(--size-300) 0;
+	}
+
+	@media (min-width: 37em) {
+		& .brand {
+			& svg {
+				width: 160px;
+			}
+		}
+	}
+}

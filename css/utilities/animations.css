@@ -1,0 +1,44 @@
+@keyframes fadeIn {
+  from {
+    opacity: var(--opacity-from, 0);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: var(--opacity-from, 1);
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes rotateTest {
+  from {
+    rotate: var(--rotate-from, 5deg)
+  }
+
+  to {
+    rotate: 0deg;
+  }
+}
+
+@keyframes slideImg {
+  from {
+    object-position: center 60%;
+    scale: .95;
+  }
+  to {
+    object-position: center;
+    scale: 1;
+  }
+}
+
+@keyframes filmstrip {
+  to {
+    mask-position: 0px 0px, 8px 42px, calc(100% - 8px) 42px;
+  }
+}

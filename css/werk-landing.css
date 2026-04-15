@@ -1,0 +1,85 @@
+.werk-landing {
+
+  
+  /* This creates columns that are at least 620px wide, but grow to fill remaining space */
+  grid-template-columns: repeat(auto-fill, minmax(min(620px, 100%), 1fr));
+  /* Ensure the gap is maintained from your existing flow variables */
+  gap: var(--flow-space, 2rem); 
+
+  @media (max-width: 32em) {
+    --flow-space: var(--size-300);
+  }
+  
+  & figure.gallery__item {
+
+    --clip-path: inset(var(--size-300, 1rem));
+    --filter: brightness(.5);
+    
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    view-timeline: --revealing-image block;
+
+    grid-column: unset !important;
+
+    & figcaption {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+      padding: var(--size-900);
+      bottom: 0;
+    }
+
+    & > .gallery__content > * {
+      animation: cubic-bezier(0.165, 0.84, 0.44, 1) fadeIn both;
+      animation-timeline: --revealing-image;
+      animation-range-start: 25%;
+      animation-range-end: cover;
+      &.button {
+        opacity: 0;
+        transition: .25s .25s;
+        animation: none;
+      }
+    }
+
+    & > .gallery__media a {
+      display: block;
+      clip-path: var(--clip-path);
+      transition: .25s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition-property: clip-path;
+
+      & img {
+
+        animation: 
+          cubic-bezier(0.4, 0, 0.55, 0.92) slideImg both, 
+          cubic-bezier(0.165, 0.84, 0.44, 1) fadeIn both;
+        animation-timeline: --revealing-image;
+        animation-range-start: 10%;
+        animation-range-end: entry, 75%;
+        
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1;
+        filter: var(--filter);
+
+        transition: .5s;
+
+        @media (orientation: portrait) {
+          aspect-ratio: 1;
+        }
+
+      }
+
+    }
+    &:focus, &:hover, &:focus-within {
+      --clip-path: inset(0);
+      --filter: brightness(1);
+
+      & .button {
+        opacity: 1;
+      }
+    }
+  }
+}

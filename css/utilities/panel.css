@@ -1,0 +1,14 @@
+/* Adds consitent space and padding for each full panel section */
+.panel {
+  position: relative;
+  margin: 0 0;
+  padding: var(--size-700) 0;
+
+  @media(min-width: 37em) {
+    padding: var(--size-major) 0;
+  }
+
+  @media(min-width: 64em) {
+    padding: var(--size-jumbo) 0;
+  }
+}

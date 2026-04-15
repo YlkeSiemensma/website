@@ -1,0 +1,61 @@
+.cta {
+	/* This is a dark panel, so we need to flip the selection styles */
+	::selection {
+		/* We set this as an RGBA because that’s how you get a solid color, by using 0.99
+		 alpha value. Browsers are wild.
+    */
+		background: var(--color-primary);
+		color: var(--color-light-shade);
+	}
+
+	.cta__heading {
+		
+		& > * {
+			font-style: inherit;
+		}
+	}
+
+	@media (min-width:37em) {
+		& .cta__inner {
+			display: grid;
+			grid-gap: var(--size-700) var(--size-500);
+			grid-template-columns: repeat(12, 1fr);
+
+			@supports (display: grid) {
+				& > * {
+					margin: 0;
+				}
+			}
+		}
+
+		& .cta__heading {
+			grid-column: 1/-1;
+		}
+
+		& .cta__summary {
+			grid-row: 2;
+
+			/* Pull the content in from the right, by reversing columns */
+			grid-column: 12/5;
+		}
+
+		& .cta__action {
+			grid-row: 3;
+			grid-column: 3/12;
+		}
+	}
+
+	@media (min-width: 62em) {
+		& .cta__inner {
+			grid-gap: var(--size-500);
+		}
+
+		& .cta__summary {
+			grid-column: 12/7;
+		}
+
+		& .cta__action {
+			grid-column: 6/12;
+		}
+	}
+}

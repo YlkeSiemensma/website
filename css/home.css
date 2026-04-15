@@ -1,0 +1,72 @@
+@import url('blocks/intro.css');
+
+.about {
+
+  h2 {
+    grid-column: 1 / -1;
+  }
+
+  & div.bio {
+    > p {
+      
+    }
+  }
+
+  & figure {
+    grid-row-start: 2;
+
+    & img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+
+      mask-composite: exclude;
+      mask-size: 100% 100%, 24px 32px, 24px 32px;
+      mask-repeat: no-repeat, repeat-y, repeat-y;
+      mask-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2232%22%3E%3Crect%20width%3D%2224%22%20height%3D%2216%22%20rx%3D%224%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E"), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2232%22%3E%3Crect%20width%3D%2224%22%20height%3D%2216%22%20rx%3D%224%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E");
+      mask-position: 0px 0px, 8px 10px, calc(100% - 8px) 10px;
+      animation: filmstrip 1s linear forwards infinite;
+    }
+  }
+
+  @media (min-width:37em) {
+
+    & div.bio {
+      /* grid-column: 1 / 2;
+      grid-row: 2; */
+    }
+
+    & figure {
+      grid-column: 1 / -1;
+      & img {
+        aspect-ratio: 4/3;
+      }
+    }
+
+  }
+  @media (max-width: 62em) {
+    & div.bio {
+      grid-column: 1 / -1;
+      grid-row: 3;
+    }
+  }
+  @media (min-width:62em) {
+   
+    & figure {
+      grid-column: -3 / span 2;
+      & img {
+        aspect-ratio: 1;
+      }
+    }
+  }
+
+  @media (min-width:96em) {
+    & div.bio {
+      grid-column: -5 / span 2;
+      grid-row: 2;
+      display: grid;
+      align-content: center;
+    }
+    
+  }
+}

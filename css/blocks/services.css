@@ -1,0 +1,41 @@
+.services {
+
+  gap: 0;
+  margin-block: var(--size-jumbo);
+
+  & ::marker {
+    color: var(--color-dark-glare);
+  }
+
+  &  > li {
+    --border-color: rgb(from var(--color-dark-glare) r g b / .25);
+    padding: var(--size-900) 1ex var(--size-900);
+    border-top: 1px solid var(--border-color) ;
+    position: sticky;
+    top: 9rem;
+    background-color: white;
+
+    @media (min-width: 37em) {
+      padding: var(--size-major) 1ex var(--size-major) !important;
+    }
+
+    @media (min-width: 62em) {
+      padding: var(--size-jumbo) 1ex var(--size-jumbo) !important;
+    }
+
+    &:last-of-type {
+      border-bottom: 1px solid var(--border-color) ;
+    }
+
+    & div {
+      @media (max-width: 62em) {
+        flex-direction: column;
+      }
+      justify-content: space-between;
+      row-gap: 2rem;
+      & p {
+        align-content: center;
+      }
+    }
+  }
+}

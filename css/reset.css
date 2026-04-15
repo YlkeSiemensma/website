@@ -1,0 +1,97 @@
+/* A modified version of my "modern reset" https://github.com/hankchizljaw/modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Add leading zero to ordered list elements */
+ol {
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+}
+
+/* Remove list styles on ul elements with a class attribute */
+ul[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  &:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  &:is(p>a) {
+    color: inherit;
+  }
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:target {
+  scroll-margin-block-start: var(--size-jumbo);
+}
+
+.material-symbols-outlined {
+  vertical-align: text-bottom;
+  user-select: none;
+  width: 1em;
+}
