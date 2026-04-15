@@ -78,6 +78,9 @@
   }
 
   & .button {
+    @media (max-width: 37em) {
+      display: none;
+    }
     position: absolute;
     inset: 50% auto auto 50%;
     width: min-content;
@@ -87,8 +90,6 @@
     color: white;
     &:hover {
       backdrop-filter: blur(.5ex);
-      
-      
     }
   }
   @media (min-width: 37em) {

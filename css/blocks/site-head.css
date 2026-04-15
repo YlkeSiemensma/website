@@ -7,6 +7,16 @@
 	color: var(--text-color);
 	fill:  currentColor;
 
+	&::after {
+		content: '';
+		backdrop-filter: blur(4px);
+		position: absolute;
+		inset: 0 0 -100% 0;
+		mask: linear-gradient(white 33%, transparent);
+		pointer-events: none;
+		z-index: -1;
+	}
+
 	&.is-on-dark {
 		--text-color: var(--color-light-glare);
 		
@@ -26,8 +36,19 @@
 		/* Optical adjustment to account for the offset the sunken 3s create */
 		transform: translateY(0.25rem);
 
+		@media (max-width: 32em) {
+			width: 48px;
+			margin: 0;
+			& svg {
+				max-width: unset !important;
+				#wordmark {
+					display: none;
+				}
+			}
+		}
+
 		& svg {
-			width: 100px;
+			width: 128px;
 			height: auto;
 			& #icon {
 				fill: var(--color-primary-shade);
@@ -35,7 +56,6 @@
 			& #wordmark {
 				fill: var(--text-color);
 			}
-		
 		}
 		/*
 		&:hover, &:focus {

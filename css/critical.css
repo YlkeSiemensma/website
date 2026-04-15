@@ -26,9 +26,9 @@
   --color-dark: #21252e;
   --color-dark-shade: #13171f;
   --color-dark-glare: #505c73;
-  --color-light: #f9f4e3;
+  --color-light: #eeeeed;
   --color-light-shade: #fff6d7;
-  --color-light-glare: #fdfbf3;
+  --color-light-glare: #fdfbf9;
   --color-primary: #ff7680;
   --color-primary-shade: #ff515e;
   --color-primary-glare: #f1a7ad;
@@ -102,13 +102,13 @@ main header, main section, main article {
   background: #505c73; }
 
 .bg-light {
-  background: #f9f4e3; }
+  background: #eeeeed; }
 
 .bg-light-shade {
   background: #fff6d7; }
 
 .bg-light-glare {
-  background: #fdfbf3; }
+  background: #fdfbf9; }
 
 .bg-primary {
   background: #ff7680; }
@@ -147,13 +147,13 @@ main header, main section, main article {
   color: #505c73; }
 
 .color-light {
-  color: #f9f4e3; }
+  color: #eeeeed; }
 
 .color-light-shade {
   color: #fff6d7; }
 
 .color-light-glare {
-  color: #fdfbf3; }
+  color: #fdfbf9; }
 
 .color-primary {
   color: #ff7680; }
