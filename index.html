@@ -18,11 +18,10 @@
   <meta name="description" content="Duurzaam ontworpen kleding voor film, theater, televisie en lifestyle." />
   <meta name="twitter:description" content="Duurzaam ontworpen kleding voor film, theater, televisie en lifestyle." />
   <meta property="og:description" content="Duurzaam ontworpen kleding voor film, theater, televisie en lifestyle." />
-  <link rel="icon" href="/images/meta/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="http://localhost:8080/images/meta/favicon-local.svg" type="image/svg+xml" />  <link rel="stylesheet" href="/css/style.css" rel="preconnect" />
+  <link rel="icon" href="/images/meta/favicon.svg" type="image/svg+xml" />  <link rel="stylesheet" href="/css/style.css" rel="preconnect" />
   
   <link rel="stylesheet" href="css/home.css" fetchpriority="high" />
-  <link rel="stylesheet" media="print" href="/fonts/fonts.css?e797-cf82-a4d1" onload="this.media='all'" />
+  <link rel="stylesheet" media="print" href="/fonts/fonts.css?4b98-5992-5ada" onload="this.media='all'" />
   
   <link rel="stylesheet" rel="preconnect" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,1,0" />
   </head>
@@ -379,6 +378,12 @@
           });
         }, 3000)
       });
+
+      if (document.location.hostname == 'localhost') {
+        let favicon = document.querySelector('[rel="icon"]');
+        favicon.setAttribute('href', favicon.href.replace('.svg','-local.svg'));
+      }
+
 
     </script>
   </body>

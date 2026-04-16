@@ -17,11 +17,10 @@
   <meta name="description" content="Geselecteerde werken" />
   <meta name="twitter:description" content="Geselecteerde werken" />
   <meta property="og:description" content="Geselecteerde werken" />
-  <link rel="icon" href="/images/meta/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="http://localhost:8080/images/meta/favicon-local.svg" type="image/svg+xml" />  <link rel="stylesheet" href="/css/style.css" rel="preconnect" />
+  <link rel="icon" href="/images/meta/favicon.svg" type="image/svg+xml" />  <link rel="stylesheet" href="/css/style.css" rel="preconnect" />
   
   <link rel="stylesheet" href="/css/werk-landing.css" fetchpriority="high" />
-  <link rel="stylesheet" media="print" href="/fonts/fonts.css?0b51-9987-ac4e" onload="this.media='all'" />
+  <link rel="stylesheet" media="print" href="/fonts/fonts.css?78db-935c-7b85" onload="this.media='all'" />
   
   <link rel="stylesheet" rel="preconnect" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,1,0" />
   </head>
@@ -355,6 +354,12 @@
           });
         }, 3000)
       });
+
+      if (document.location.hostname == 'localhost') {
+        let favicon = document.querySelector('[rel="icon"]');
+        favicon.setAttribute('href', favicon.href.replace('.svg','-local.svg'));
+      }
+
 
     </script>
   </body>
