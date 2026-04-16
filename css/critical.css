@@ -30,8 +30,8 @@
   --color-light-shade: #fff6d7;
   --color-light-glare: #fdfbf9;
   --color-primary: #da0058;
-  --color-primary-shade: #ff515e;
-  --color-primary-glare: #f1a7ad;
+  --color-primary-shade: #850337;
+  --color-primary-glare: #f15895;
   --color-secondary: #6ac2b6;
   --color-secondary-shade: #35a495;
   --color-secondary-glare: #98e2d8;
@@ -114,10 +114,10 @@ main header, main section, main article {
   background: #da0058; }
 
 .bg-primary-shade {
-  background: #ff515e; }
+  background: #850337; }
 
 .bg-primary-glare {
-  background: #f1a7ad; }
+  background: #f15895; }
 
 .bg-secondary {
   background: #6ac2b6; }
@@ -159,10 +159,10 @@ main header, main section, main article {
   color: #da0058; }
 
 .color-primary-shade {
-  color: #ff515e; }
+  color: #850337; }
 
 .color-primary-glare {
-  color: #f1a7ad; }
+  color: #f15895; }
 
 .color-secondary {
   color: #6ac2b6; }

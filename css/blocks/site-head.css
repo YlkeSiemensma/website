@@ -19,7 +19,6 @@
 
 	&.is-on-dark {
 		--text-color: var(--color-light-glare);
-		
 	}
 
 	& .inner {
@@ -51,7 +50,7 @@
 			width: 128px;
 			height: auto;
 			& #icon {
-				fill: var(--color-primary-shade);
+				fill: var(--color-primary);
 			}
 			& #wordmark {
 				fill: var(--text-color);

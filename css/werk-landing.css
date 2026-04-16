@@ -37,10 +37,17 @@
       animation-timeline: --revealing-image;
       animation-range-start: 25%;
       animation-range-end: cover;
+
       &.button {
         opacity: 0;
-        transition: .25s .25s;
+        transition: color .25s .25s;
         animation: none;
+        background: #fff1;
+        backdrop-filter: blur(8px);
+        color: white;
+        &:hover, :focus {
+          color: var(--color-primary)
+        }
       }
     }
 

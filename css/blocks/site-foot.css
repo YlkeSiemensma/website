@@ -31,7 +31,7 @@
 		width: 32rem;
 		& path {
 			&:first-of-type {
-				fill: var(--color-primary-shade);
+				fill: var(--color-primary);
 			}
 
 			fill: var(--color-dark-shade);

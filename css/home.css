@@ -1,5 +1,13 @@
 @import url('blocks/intro.css');
 
+.services h3 {
+  background: linear-gradient(to bottom, var(--color-primary-shade), var(--color-primary), var(--color-primary-glare), white);
+  color: transparent;
+  background-clip: text;
+  background-attachment: fixed;
+  padding-inline-end: .25ex;
+}
+
 .about {
 
   h2 {
