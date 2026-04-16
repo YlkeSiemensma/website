@@ -29,7 +29,7 @@
   --color-light: #eeeeed;
   --color-light-shade: #fff6d7;
   --color-light-glare: #fdfbf9;
-  --color-primary: #ff7680;
+  --color-primary: #da0058;
   --color-primary-shade: #ff515e;
   --color-primary-glare: #f1a7ad;
   --color-secondary: #6ac2b6;
@@ -111,7 +111,7 @@ main header, main section, main article {
   background: #fdfbf9; }
 
 .bg-primary {
-  background: #ff7680; }
+  background: #da0058; }
 
 .bg-primary-shade {
   background: #ff515e; }
@@ -156,7 +156,7 @@ main header, main section, main article {
   color: #fdfbf9; }
 
 .color-primary {
-  color: #ff7680; }
+  color: #da0058; }
 
 .color-primary-shade {
   color: #ff515e; }
